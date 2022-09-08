@@ -16,7 +16,7 @@ print('Olá', nome, 'você nasceu no dia', dia, 'de', mes, 'de', ano + '.', 'Voc
 
 ##Desafio 3
 print('Olá', nome, 'vamos fazer uma conta de adição')
-n1 = input('Digite um número: ')
-n2 = input('Agora digite outro número: ')
+n1 = int(input('Digite um número: '))
+n2 = int(input('Agora digite outro número: '))
 
-print (nome, 'a soma dos números que você inseriu é: ', n1 + n2)
+print(nome, 'a soma dos números que você inseriu é: ', n1 + n2)
