@@ -1,0 +1,13 @@
+frase = '   olá mundo   '
+print(frase[::2])
+print(len(frase))
+print(frase.count('o'))
+print(frase.find('mun'))
+print('mundo' in frase)
+print(frase.replace('olá', 'rolão'))
+print(frase.upper())
+print(frase.capitalize())
+print(frase.title())
+print(frase.strip())
+print(frase.split())
+print('-'.join(frase))
