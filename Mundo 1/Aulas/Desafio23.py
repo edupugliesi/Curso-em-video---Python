@@ -8,11 +8,11 @@
 #Milhar: 1
 
 nome = str(input('\nQual o seu nome? ')).strip()
-numero = str(input('Insira um número de 0 a 9999: '))
+numero = int(input('Insira um número de 0 a 9999: '))
 
-unidade = numero[3]
-dezena = numero[2]
-centena = numero[1]
-milhar = numero[0]
+unidade = numero // 1 % 10
+dezena = numero // 10 % 10
+centena = numero // 100 % 10
+milhar = numero // 1000 % 10
 
 print('\nOlá {}, o número digitado foi {} \nUnidade: {} \nDezena: {} \nCentena: {} \nMilhar: {}'.format(nome, numero, unidade, dezena, centena, milhar))
