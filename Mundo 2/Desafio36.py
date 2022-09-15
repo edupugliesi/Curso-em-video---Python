@@ -14,5 +14,5 @@ parcelaMaxima = salario * 30 / 100
 
 if parcelas > parcelaMaxima:
     print('{}, o valor da parcela supera em 30% do seu salário. Financiamento negado!'.format(nome))
-if parcelas <= parcelaMaxima:
+elif parcelas <= parcelaMaxima:
     print('{} financiamento aprovado! Você pagará R${:.2f} por mês durante {} meses'.format(nome, parcelas, meses))
