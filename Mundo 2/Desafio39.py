@@ -5,9 +5,14 @@
 #Se já passou o tempo do alistamento
 
 #Seu programa também deverá mostrar o tempo que falta ou que passou do prazo
+
+from datetime import date
+
 print('=' * 30)
 nome = str(input('Qual o seu nome? '))
-idade = int(input('{}, qual a sua idade? '.format(nome)))
+anoNascimento = int(input('{}, que ano você nasceu? '.format(nome)))
+
+idade = date.today().year - anoNascimento
 
 if idade == 18:
     print('{}, você tem {} anos. Está na hora de se alistar ao serviço militar obrigatório!'.format(nome, idade))

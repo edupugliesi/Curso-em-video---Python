@@ -13,7 +13,7 @@ media = (n1 + n2) / 2
 
 if media < 5:
     print('{}, sua média foi {} e você está reprovado!'.format(nome, media))
-elif media >= 5 and media <= 6.9:
+elif media >= 5 and media < 7.0:
     print('{}, sua média foi {} e você está de recuperação!'.format(nome, media))
 elif media >= 7:
     print('Parabéns {}, sua média foi {} e você está APROVADO!'.format(nome, media))
