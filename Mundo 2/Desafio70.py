@@ -13,28 +13,33 @@ produto = ''
 preco = 0
 total = 0
 produtoMaisDe1000Reais = 0
-produtoMaisBarato = ''
+NomeProdutoMaisBarato = ''
 valorProdutoMaisBarato = 0
+count = 0
 op = ''
 
 while True:
     produto = str(input('\nInsira o nome do produto: '))
     preco = float(input('Insira o preço do produto: '))
     op = str(input('Mais algum produto? [S/N] ')).strip().upper()
-    total += preco
-    valorProdutoMaisBarato = preco
-    produtoMaisBarato = produto
-    
+    total += preco # Total da compra
+    count += 1
+
+    #Produtos com preço maior de 1000 reais
     if preco > 1000:
         produtoMaisDe1000Reais += 1
-    if preco < valorProdutoMaisBarato:
+    #Nome e valor do produto mais barato    
+    if count == 1 or preco < valorProdutoMaisBarato:
         valorProdutoMaisBarato = preco
-        produtoMaisBarato = produto
+        NomeProdutoMaisBarato = produto
+        
+    print(valorProdutoMaisBarato)
+    
     if op == 'N':
         break
     
 print("+"*50)
-print(f'O total da compra foi R${total}')
+print(f'O total da compra foi R${total:.2f}')
 print(f'{produtoMaisDe1000Reais} produtos custaram mais de R$1000,00.')
-print(f'O produto mais barato é {produtoMaisBarato}')
+print(f'O produto mais barato custa {valorProdutoMaisBarato:.2f} e é {NomeProdutoMaisBarato}')
     
