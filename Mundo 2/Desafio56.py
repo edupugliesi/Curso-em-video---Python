@@ -11,9 +11,10 @@ Quantas mulheres tem menos de 21 anos,
 MediaIdade = 0
 IdadeTotal = 0
 
-MaiorIdade = 0
-count = 0
+HomemMaiorIdade = 0
 NomeHomemMaiorIdade = ''
+count = 0
+
 
 for c in range(1, 5):
     print('\n--- {}º PESSOA ---\n'.format(c))
@@ -21,15 +22,19 @@ for c in range(1, 5):
     idade = int(input('Idade: '))
     sexo = str(input('Sexo: ')).upper().strip()
     
-    IdadeTotal =+ idade
+    IdadeTotal += idade
     MediaIdade = IdadeTotal / c
     
-    if sexo == 'M':
-        MaiorIdade = idade
+    if c == 1 and sexo in 'Mm':
+        HomemMaiorIdade = idade
+        NomeHomemMaiorIdade = nome
+    if sexo in 'Mm' and idade > HomemMaiorIdade:
+        HomemMaiorIdade = idade
         NomeHomemMaiorIdade = nome
     if sexo == 'F' and idade < 21:
         count += 1
     
+print(IdadeTotal)
 print('\nA média de idade do grupo é {} anos!'.format(MediaIdade))
 print('Existem {} mulheres com menos de 21 anos!'.format(count))
-print('O homem com a maior idade tem {} e se chama {}'.format(MaiorIdade, NomeHomemMaiorIdade))
+print('O homem com a maior idade tem {} anos e se chama {}'.format(HomemMaiorIdade, NomeHomemMaiorIdade))
