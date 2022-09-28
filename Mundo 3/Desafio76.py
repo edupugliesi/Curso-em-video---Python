@@ -6,6 +6,13 @@ No final, mostre uma listagem de preços, organizando os dados em uma forma tabu
 tupla = ('Caderno', 2.50, 'Caneta', 1.25, 'Borracha', 2.30, 'Lapis', 1.45, 'Apontador', 1.15)
 count = 0
 
-for lista in tupla:
-    print(f'{tupla[0 + count]}...............R${tupla[1 + count]}')
-    count += 2
+print('-'*50)
+
+for lista in range(0, len(tupla)):
+    if lista % 2 == 0:
+        print(f'{tupla[lista]:.<30}', end='')
+    else:
+        print(f'R${tupla[lista]:>7.2f}')
+    
+print('-'*50)
+print('Fim')
