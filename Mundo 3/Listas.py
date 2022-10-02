@@ -1,4 +1,3 @@
-import enum
 
 
 lanche = ['hamburguer', 'suco', 'pizza', 'pudim']
