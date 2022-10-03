@@ -8,16 +8,15 @@ numero = 1
 lista = []
 listaPar = []
 listaImpar = []
-op = ''
 count = 1
 
 while True:
     numero = int(input(f'Digite o {count}º número: '))
+    count += 1
     
     while numero <= 0:
         numero = int(input('Número Inválido. Digite um número inteiro e maior que 0: ' ))
-        
-    count += 1
+    
     lista.append(numero)
     
     if numero % 2 == 0:

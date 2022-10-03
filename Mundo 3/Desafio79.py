@@ -5,22 +5,25 @@ em ordem crescente.
 '''
 
 lista = []
-numero = 0
 count = 1
-op = ''
 
 while True:
-    numero = int(input(f'Insira o {count}º número: '))
-    lista.append(numero)
-        
-    op = str(input('Deseja continuar? [S/N]: ')).strip().upper()
+    numeros = int(input(f'Insira o {count}º número: '))
     count += 1
     
-    print('-'*30)
+    # Verificar se o número digitado já existe na lista
+    while numeros in lista:
+        numeros = int(input('Número já existe na lista, insira outro valor: '))
     
+    lista.append(numeros)
+    
+   
+    op = str(input('Deseja continuar? [S/N]: ')).strip().upper()
+    
+    print('-'*30)
         
     if op != 'S':
         break
 
 lista.sort()
-print(lista)
+print(f'Números inseridos em ordem crescente são: {lista}')

@@ -9,7 +9,6 @@ C - Se o valor 5 foi digitado e está ou não na lista.
 
 lista = []
 count = 1
-op = ''
 
 while True:
     lista.append(int(input(f'Digite o {count}º número: ')))
