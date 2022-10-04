@@ -14,11 +14,13 @@ while True:
     numero = int(input(f'Digite o {count}º número: '))
     count += 1
     
+    # Valida que o número digitado será sempre positivo e maior que 0.
     while numero <= 0:
         numero = int(input('Número Inválido. Digite um número inteiro e maior que 0: ' ))
     
     lista.append(numero)
     
+    # IF para verificar e separar números PARES e IMPARES em suas respectivas listas.
     if numero % 2 == 0:
         listaPar.append(numero)
     elif numero % 2 != 0:
