@@ -9,8 +9,8 @@ turma = []
 # Estrutura para preenchimento das listas com os alunos e as notas.
 while True:
     aluno.append(str(input('Aluno: ')))
-    aluno.append(int(input('Nota 1: ')))
-    aluno.append(int(input('Nota 2: ')))
+    aluno.append(float(input('Nota 1: ')))
+    aluno.append(float(input('Nota 2: ')))
     turma.append(aluno[:])
     aluno.clear()
     

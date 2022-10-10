@@ -9,14 +9,19 @@ print('='*30)
 matriz = [[], [], []]
 numeros = 0
 
+# Inserir números na primeira linha
 for a in range(0, 3):
     numeros = int(input(f'Digite o {a+1}º da primeira linha: '))
     matriz[0].append(numeros)
 
+
+# Inserir números na segunda linha
 for b in range(0, 3):
     numeros = int(input(f'Digite o {b+1}º da segunda linha: '))
     matriz[1].append(numeros)
-    
+
+
+# Inserir números na terceira linha
 for c in range(0, 3):
     numeros = int(input(f'Digite o {c+1}º da terceira linha: '))
     matriz[2].append(numeros)
