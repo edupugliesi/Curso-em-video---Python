@@ -4,27 +4,28 @@ se por acaso a ctps for diferente de ZERO, o dicionário receberá tambpem o ano
 Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
 '''
 
+from datetime import datetime
+
 print('='*30)
 
 trabalhador = {}
 trabalhadores = []
 
 while True:
-    
-
     trabalhador['nome'] = str(input('Nome: '))
     anoDeNascimento = int(input('Ano de Nascimento: '))
-    trabalhador['idade'] = 2022 - anoDeNascimento
-    trabalhador['carteira de trabalho'] = int(input('Carteira de Trabalho: '))
+    trabalhador['idade'] = datetime.now().year - anoDeNascimento
+    trabalhador['carteira de trabalho'] = int(input('Carteira de Trabalho (0 caso não houver): '))
     
-    if trabalhador['carteira de trabalho'] > 0:
+    if trabalhador['carteira de trabalho'] != 0:
         trabalhador['ano de contratação'] = int(input('Ano de contratação: '))
         trabalhador['salário'] = int(input('Salário: '))
-        trabalhador['aposentadoria (idade)'] = trabalhador['idade'] + 35
+        trabalhador['aposentadoria (idade)'] = (trabalhador['ano de contratação']- anoDeNascimento) + 35
     
     trabalhadores.append(trabalhador.copy())
+    trabalhador.clear()
     
-    op = str(input('Deseja continuar? [S/N]')).strip().upper()
+    op = str(input('Deseja continuar? [S/N] ')).strip().upper()
     
     if op == 'N':
         print('='*30)
@@ -32,4 +33,7 @@ while True:
     
     print('-'*30)
 
-print(trabalhador)
+for t in trabalhadores:
+    for k, v in t.items():
+        print(f'# {k}: {v}')
+    print('-'*30)

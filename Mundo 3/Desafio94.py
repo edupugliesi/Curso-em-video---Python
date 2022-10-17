@@ -13,6 +13,7 @@ print('='*30)
 
 pessoa = {}
 grupo = []
+mulheres = []
 
 count = 1
 
@@ -21,6 +22,7 @@ while True:
     pessoa['nome'] = str(input('Nome: ')).title().strip()
     pessoa['sexo'] = str(input('Sexo: ')).upper().strip()
     pessoa['idade'] = int(input('Idade: '))
+    
     
     grupo.append(pessoa.copy())
     

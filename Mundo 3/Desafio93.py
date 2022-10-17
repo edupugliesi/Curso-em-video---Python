@@ -4,7 +4,7 @@ O programa vai ler o nome do jogador, quantas partidas ele jogou.
 Depois vai ler a quantidade de gols feitos em cada partida.
 No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
 '''
-
+print('='*30)
 
 jogador = {}
 gols = 0
@@ -13,7 +13,8 @@ somaGols = 0
 count = 1
 
 jogador['nome'] = str(input('Nome do jogador: '))
-qtdeJogos = int(input('Quantos jogos ele jogou? '))
+qtdeJogos = int(input('Quantos jogos jogou? '))
+jogador['jogos']=qtdeJogos
 
 while qtdeJogos != 0:
     
@@ -26,8 +27,9 @@ while qtdeJogos != 0:
 for gol in TotalGols:
     somaGols += gol
 jogador['total de gols'] = somaGols
-    
-        
 
-print(jogador)
+print('-'*30)
+for k, v in jogador.items():
+    print(f'{k}: {v}')
+    
 print(TotalGols)

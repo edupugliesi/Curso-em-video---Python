@@ -32,7 +32,7 @@ while True:
     
 print(turma)
 
-for a in turma:
-    for n, m, s in a.items():
-        print(f'O aluno {n} tem uma média {m} e sua situação é {s}')
+for t in turma:
+    for k, v in t.items():
+        print(f'{k} é igual a {v}')
 print('Fim')
