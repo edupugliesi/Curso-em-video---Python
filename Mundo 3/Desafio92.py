@@ -8,15 +8,18 @@ from datetime import datetime
 
 print('='*30)
 
+# Declarações do dicionário e da lista
 trabalhador = {}
 trabalhadores = []
 
 while True:
+    # Inputs diretamente no dicionário
     trabalhador['nome'] = str(input('Nome: '))
     anoDeNascimento = int(input('Ano de Nascimento: '))
-    trabalhador['idade'] = datetime.now().year - anoDeNascimento
+    trabalhador['idade'] = datetime.now().year - anoDeNascimento # Calcular idade e inserir no dicionário
     trabalhador['carteira de trabalho'] = int(input('Carteira de Trabalho (0 caso não houver): '))
     
+    # Validar se existe uma carteira de trabalho e adicionar dados referentes a contratação
     if trabalhador['carteira de trabalho'] != 0:
         trabalhador['ano de contratação'] = int(input('Ano de contratação: '))
         trabalhador['salário'] = int(input('Salário: '))
@@ -25,14 +28,15 @@ while True:
     trabalhadores.append(trabalhador.copy())
     trabalhador.clear()
     
+    # Operação para finalizar o programa
     op = str(input('Deseja continuar? [S/N] ')).strip().upper()
-    
     if op == 'N':
         print('='*30)
         break
     
     print('-'*30)
 
+# Printar os trabalhadores na tela
 for t in trabalhadores:
     for k, v in t.items():
         print(f'# {k}: {v}')
