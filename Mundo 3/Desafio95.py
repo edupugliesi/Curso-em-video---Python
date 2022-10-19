@@ -27,7 +27,7 @@ while True:
     qtdeJogos = int(input('Quantos jogos jogou? ')) # Input da quantidade de jogos
     jogador['jogos']=qtdeJogos # Quantidade de jogos no dicionário
     
-    # While com base na quantidade de jogos
+    # While com base na quantidade de jogos (Contagem de gols)
     while qtdeJogos != 0:
         
         gols = int(input(f'- Quantos gols feitos na {count}º partida? '))
