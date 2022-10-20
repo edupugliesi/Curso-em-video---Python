@@ -10,3 +10,10 @@ saída
 Olá mundo
 ---------
 '''
+
+def mensagem(msg):
+    print('#'*len(msg))
+    print(msg)
+    print('#'*len(msg))
+
+mensagem(str(input('Digite a mensagem que deseja mostrar: ')))
