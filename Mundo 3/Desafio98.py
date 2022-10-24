@@ -32,14 +32,14 @@ def contador():
     
     if inicio < fim:
         mensagem('Contagem progressiva: ')
-        while inicio != fim:
+        while inicio < fim:
             inicio += passo
             print(f'{inicio} ', end='')
         print()
             
     elif inicio > fim:
         mensagem('Contagem regressiva: ')
-        while inicio != fim:
+        while inicio > fim:
             inicio -= passo
             print(f'{inicio} ', end='')
         print()
