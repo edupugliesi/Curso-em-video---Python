@@ -62,7 +62,7 @@ f3 = fatorial()
 
 print(f'Os resultados são {f1} {f2} {f3}')
 
-divisoria('Função com RETURN lógico')
+divisoria('Função com RETURN lógico') 
 
 def par(n=0):
     if n % 2 == 0:
