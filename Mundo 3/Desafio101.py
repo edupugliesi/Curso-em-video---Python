@@ -4,22 +4,25 @@ de uma pessoa, retornando o valor literal indicando se uma pessoa tem voto NEGAD
 nas eleições
 '''
 
-from datetime import datetime
+
 
 def texto(msg):
+    linha = len(msg) + 4
     print()
-    print('#'*len(msg))
-    print(msg)
-    print('#'*len(msg))
+    print('#'*linha)
+    print(f'  {msg}')
+    print('#'*linha)
     print()
 
 def voto(anoNascimento):
+    from datetime import datetime
+    
     anoAtual = datetime.now().year
     idade = anoAtual - anoNascimento
     if idade < 16:
-        texto(f'{nome}, você tem {idade} anos, portanto seu voto é proibido')
+        texto(f'{nome}, você tem {idade} anos, seu voto é proibido')
     elif idade >= 16 and idade < 18:
-        texto(f'{nome}, você tem {idade} anos, portanto seu voto é opcional')
+        texto(f'{nome}, você tem {idade} anos, seu voto é opcional')
     elif idade >= 18 and idade < 60:
         texto(f'{nome}, você tem {idade} anos, seu voto obrigatório')
     elif idade > 60:

@@ -11,12 +11,23 @@ def texto(msg):
     print('-' * linha)
     print()
 
-def leiaint(n):
-    n = input('Insira um número: ')
+def leiaint(msg):
+    ok = False
+    valor = 0
+    while True:
+        n = str(input(msg))
+        if n.isnumeric():
+            valor = int(n)
+            ok = True
+        else:
+            print('\033[0;31mERRO! Digite um número válido.\033[m')
+        if ok:
+            break
+    return valor
     
-    while n != int or n != float:
-        n = input('Valor inválido, por favor informe um número: ')
-    print(f'O valor digitado foi o número {n}')
+    
 
 texto('Validar dados')
-leiaint(5)
+n = leiaint('Digite um número: ')
+
+print(f'Você acabou de digitar o número {n}')

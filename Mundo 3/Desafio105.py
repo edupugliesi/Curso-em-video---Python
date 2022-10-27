@@ -18,60 +18,29 @@ def texto(msg):
     print('-' * linha)
     print()
 
-
-def notas():
-    turma = []
-    alunos = {}
+def notas(*n, sit=False):
+    """
+    > Função para analisar notas e situações de vários alunos
+    N = Uma ou mais notas dos alunos (Aceita várias)
+    SIT = Valor opcional para indicar a situação da turma
+    RETURN = Retorna dicionário com as informações sobre a turma
+    """
+    r = {}
+    r['total'] = len(n)
+    r['maior'] = max(n)
+    r['menor'] = min(n)
+    r['média'] = sum(n)/len(n)
     
-    count1 = 1
+    if sit:
+        if r['média'] >= 7:
+            r['situação'] = 'BOA'
+        elif r['média'] >= 5:
+            r['situação'] = 'RAZOÁVEL'
+        elif r['média'] < 5:
+            r['situação'] = 'RUIM'
     
-    texto('Alunos')
-    
-    while True:
-        
-        
-        alunos['nome'] = str(input(f'{count1}º aluno: '))
-        
-        count2 = 1
-        totalNotas = []
-        
-        texto('Notas')
-        while True:
-            
-            nota = float(input(f'{count2}º nota: '))
-            totalNotas.append(nota)
-            
-            print(totalNotas)
-            
-            op1 = str(input('Deseja adicionar mais notas? [S/N] ')).upper()
-            if op1 == 'N':
-                break
-            
-        
-            count2 +=1
-        
-        alunos['nota'] = totalNotas.copy()
-        
-        texto('Alunos')
-        
-        turma.append(alunos.copy())
-        alunos.clear()
-        
-        count1 += 1
-        
-        op2 = str(input('Deseja adicionar mais alunos? [S/N] ')).upper()
-        if op2 == 'N':
-            break
-        
-        
-    texto('Resultado')
-    print(turma)
+    return r
 
-
-notas()
-        
-        
-        
-        
-        
-        
+resp = notas(5.5, 2.5, 8.5, sit=True)
+print(resp)
+#help(notas)

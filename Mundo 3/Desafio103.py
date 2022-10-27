@@ -13,10 +13,16 @@ def texto(msg):
     print('-' * linha)
     print()
 
-def ficha(nome = ' ', gols = 0):
+def ficha(nome = '', gols = ''):
     texto('Jogador')
-    print(f'Jogador: {nome}')
-    print(f'Gols: {gols}')
+    if nome == '':
+        nome = '<Desconhecido>'
+    if gols == '':
+        gols = '0'
+    print(f'O jogador {nome} fez {gols} gols')
+    
 
 texto(f'Ficha do jogador')
-ficha(str(input('Jogador: ')), int(input('Gols: ')))
+n = str(input('Jogador: '))
+g = str(input('Nº de Gols: '))
+ficha(n, g)

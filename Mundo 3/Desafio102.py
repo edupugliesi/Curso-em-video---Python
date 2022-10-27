@@ -12,29 +12,31 @@ def texto(msg):
     print('-' * linha)
     print()
 
-def fatorial(num = 1):
+def fatorial(num, show=False):
     f = 1
     for c in range(num, 0, -1):
+        if show:
+            print(c, end='')
+            if c > 1:
+                print(' x ', end='')
+            else:
+                print(' = ', end='')
         f *= c
-    texto(f'O fatorial de {num} é igual a {f}')
-
-
-def calculo(num = 1):
-    f = 1
-    for c in range(num, 0, -1):
-        f *= c
-        print(f)
+    print(f)
     
     
 
 texto('Fatorial')
-n = (int(input('Digite um número: ')))
-fatorial(n)
+
+n = int(input('Digite um número: '))
 
 op = str(input('Deseja mostrar todo o calculo? [S/N] ')).upper().strip()
 if op == 'S':
-    calculo(n)
+    fatorial(n, show=True)
+
 else:
-    texto('Fim')
+    fatorial(n)
+
+
 
 
