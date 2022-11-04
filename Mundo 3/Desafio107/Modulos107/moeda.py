@@ -1,19 +1,16 @@
-def aumentar(n):
-    final = n + (n * 0.10)
+def aumentar(p, t):
+    final = p + (p * t/100)
     return f'O aumento de 10% sobre o valor digitado é {final}'
 
-def diminuir(n):
-    final = n - (n * 0.10)
+def diminuir(p, t):
+    final = p - (p * t/100)
     return f'A redução de 10% sobre o valor digitado é {final}'
 
-def dobro(n):
-    final = n * 2
+def dobro(p):
+    final = p * 2
     return f'O dobro do valor digitado é {final}'
 
-def metade(n):
-    final = n / 2
+def metade(p):
+    final = p / 2
     return f'A metade do valor digitado é {final}'
-
-def moeda(n = float):
-    return f'R${n:.2f}'
     
