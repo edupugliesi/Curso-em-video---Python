@@ -5,10 +5,10 @@ os valores como um valor monetário formatado
 
 from Modulos108 import moeda, titulo
 
-titulo.titulo('Desafio107 - Manipulação de valores')
+titulo.titulo('Desafio108 - Manipulação de valores')
 
 valor = float(input('Digite um valor (R$): '))
-taxa = int(input('Digite a taxa (%): '))
+taxa = float(input('Digite a taxa (%): '))
 
 print(f'O valor aumentado em {taxa}% é {moeda.moeda(moeda.aumentar(valor, taxa))}')
 print(f'O valor diminuído em {taxa}% é {moeda.moeda(moeda.diminuir(valor, taxa))}')

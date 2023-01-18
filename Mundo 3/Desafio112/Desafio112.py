@@ -3,3 +3,12 @@ Dentro do pacote utilidadesCeV que criamos no desafio111, temos um módulo chama
 Crie uma função chamada leiaDinheiro() que seja capaz de funcionar como a função input(),
 mas com uma validação de dados para aceitar apenas valores que sejam monetários.
 '''
+
+from utilidadesCeV import moeda, titulo, dado
+
+titulo.titulo('Desafio112 - Manipulação de valores')
+
+valor = dado.validarEntrada('Digite um valor (R$): ')
+taxa = dado.validarEntrada('Digite a taxa (%): ')
+
+moeda.resumo(valor, taxa)
